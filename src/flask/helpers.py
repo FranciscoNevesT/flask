@@ -41,7 +41,7 @@ def get_load_dotenv(default: bool = True) -> bool:
     """
     val = os.environ.get("FLASK_SKIP_DOTENV")
 
-    if not val:
+    if val:
         return default
 
     return val.lower() in ("0", "false", "no")
